@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_utilities_buttons",
+  "info": {
+    "displayName": "Button",
+    "icon": "ad",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trades",
+  "info": {
+    "singularName": "trade",
+    "pluralName": "trades",
+    "displayName": "Trade",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ticker": {
+      "type": "string"
+    },
+    "numberOfShares": {
+      "type": "integer"
+    },
+    "unitPrice": {
+      "type": "decimal"
+    },
+    "orderType": {
+      "type": "enumeration",
+      "enum": [
+        "BUY",
+        "SELL"
+      ]
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "trades"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "OPEN",
+        "CLOSED"
+      ]
+    }
+  }
+}
